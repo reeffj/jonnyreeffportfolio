@@ -61,38 +61,7 @@ nav ul li a {
   color: #fff;
   display: none; }
 
-@media (max-width: 840px) {
-  .logo {
-    letter-spacing: .5em;
-    margin-top: 36px;
-    font-size: 24px; } }
 
-@media (max-width: 620px) {
-  .logo {
-    position: fixed;
-    top: 0;
-    margin-top: 30px;
-    letter-spacing: .25em; }
-  nav ul {
-    max-height: 0px;
-    background: rgba(0, 0, 0, 0.8); }
-  nav.black ul {
-    background: rgba(0, 0, 0, 0.8); }
-  .showing {
-    max-height: 20em; }
-  nav ul li {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    padding: 18px 24%;
-    text-align: center; }
-  .menu-icon {
-    display: block; } }
-
-@media (max-width: 450px) {
-  .logo {
-    font-size: 20px;
-    margin-top: 32px; } }
 
 section.section1 {
   width: 100%; }
@@ -116,3 +85,149 @@ section.section1 {
 .img-responsive {
   width: 100%;
   height: auto; }
+
+
+
+/*==========     Modal Styling        =============*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 30vh; /* Location of the box*/
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: .5em;
+    background-color: #353535;
+    color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  text-align: center;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #353535;
+    color: white;
+}
+
+
+/*    ========      Media Queries     =======      */
+
+@media (max-width: 840px) {
+  .logo {
+    letter-spacing: .5em;
+    margin-top: 36px;
+    font-size: 24px; } 
+    
+  .modal-content {
+      width: 60%;
+    }
+    
+  .modal {
+    padding-top: 30vh;
+  }
+  
+}
+
+@media (max-width: 620px) {
+  .logo {
+    position: fixed;
+    top: 0;
+    margin-top: 30px;
+    letter-spacing: .25em; }
+  nav ul {
+    max-height: 0px;
+    background: rgba(0, 0, 0, 0.8); }
+  nav.black ul {
+    background: rgba(0, 0, 0, 0.8); }
+  .showing {
+    max-height: 20em; }
+  nav ul li {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 18px 24%;
+    text-align: center; }
+  .menu-icon {
+    display: block; } 
+    
+    .modal-content {
+      width: 80%;
+    }
+    
+    .modal {
+    padding-top: 30vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo {
+    font-size: 20px;
+    margin-top: 32px; 
+    
+  } 
+  
+  .modal-content {
+      width: 95%;
+    }
+    
+  .modal {
+    padding-top: 30vh;
+  }
+  
+}
